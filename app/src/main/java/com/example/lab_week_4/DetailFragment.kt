@@ -22,21 +22,25 @@ class DetailFragment : Fragment() {
         get() = view?.findViewById(R.id.coffee_title)
     private val coffeeDesc: TextView?
         get() = view?.findViewById(R.id.coffee_desc)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-// Inflate the layout for this fragment
+        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_detail, container, false)
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val coffeeId = arguments?.getInt(COFFEE_ID, 0) ?: 0
         setCoffeeData(coffeeId)
     }
+
     fun setCoffeeData(id: Int){
         when(id){
             R.id.affogato -> {
@@ -53,6 +57,7 @@ class DetailFragment : Fragment() {
             }
         }
     }
+
     companion object {
         private const val COFFEE_ID = "COFFEE_ID"
     }

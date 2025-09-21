@@ -25,8 +25,22 @@
         android:label="fragment_favorites"
         tools:layout="@layout/fragment_favorites" />
     <fragment
-        android:id="@+id/cafeFragment2"
+        android:id="@+id/cafeFragment"
         android:name="com.example.lab_week_4.CafeFragment"
         android:label="fragment_cafe"
-        tools:layout="@layout/fragment_cafe" />
+        tools:layout="@layout/fragment_cafe" >
+        <action
+            android:id="@+id/action_cafeFragment2_to_cafeDetailFragment"
+            app:destination="@id/cafeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cafeDetailFragment"
+        android:name="com.example.lab_week_4.CafeDetailFragment"
+        android:label="fragment_cafe_detail"
+        tools:layout="@layout/fragment_cafe_detail" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.lab_week_4.MainActivity"
+        android:label="app_bar_main"
+        tools:layout="@layout/app_bar_main" />
 </navigation>
